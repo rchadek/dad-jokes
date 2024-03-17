@@ -43,6 +43,7 @@ export default function Home() {
             width={600}
             height={600}
             alt=""
+            priority={true}
           />
         </div>
         <div className="col-span-9 xl:col-span-5 px-0 xl:px-36 py-0 xl:py-12">
@@ -55,6 +56,7 @@ export default function Home() {
               width={600}
               height={600}
               alt=""
+              priority={true}
           />
         </div>
       </div>
@@ -67,6 +69,7 @@ export default function Home() {
                 width={600}
                 height={600}
                 alt=""
+                priority={false}
               />
           </div>
           <div className="col-span-3 flex xl:hidden">
@@ -75,6 +78,7 @@ export default function Home() {
                 width={600}
                 height={600}
                 alt=""
+                priority={false}
             />
           </div>
           <div className="col-span-1"></div>
