@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import useSWR from 'swr';
 import Image from "next/image";
 
@@ -26,63 +26,67 @@ export default function Home() {
   const [dadJoke, setDadJoke] = useState('Press the button to activate awesomeness');
 
   return (
-    <main className="flex gap-16 min-h-screen flex-col items-center justify-center p-24">
+    <div>
 
-      <div className="grid lg:max-w-8xl lg:w-full">
-      
-        <div className="text-center">
-          <h1 className="text-4xl font-bold">Welcome to the Dad Joke Generator</h1>
-        </div>
+      <main className="flex gap-16 min-h-screen flex-col items-center justify-center p-24">
+
+        <div className="grid lg:max-w-8xl lg:w-full">
         
-      </div>
+          <div className="text-center">
+            <h1 className="text-4xl font-bold">Welcome to the Dad Joke Generator</h1>
+          </div>
+          
+        </div>
 
-      <div className="mb-12 grid grid-cols-9 text-center lg:max-w-8xl lg:w-full lg:mb-0">
-        <div className="col-span-2 hidden xl:flex">
-          <Image
-            src="/dad-jokes-generator-dad-600x600-01.jpg"
-            width={600}
-            height={600}
-            alt=""
-            priority={true}
-          />
-        </div>
-        <div className="col-span-9 xl:col-span-5 px-0 xl:px-36 py-0 xl:py-12">
-          <p className="text-xl mb-6">{dadJoke}</p>
-          <button className="mt-6 p-5 bg-indigo-500 hover:bg-black text-white	rounded" onClick={fetchData}>Generate Dad Joke</button>
-        </div>
-        <div className="col-span-2 hidden xl:flex">
-          <Image
-              src="/dad-jokes-generator-teenager-600x600-01.jpg"
+        <div className="mb-12 grid grid-cols-9 text-center lg:max-w-8xl lg:w-full lg:mb-0">
+          <div className="col-span-2 hidden xl:flex">
+            <Image
+              src="/dad-jokes-generator-dad-600x600-01.jpg"
               width={600}
               height={600}
               alt=""
               priority={true}
-          />
-        </div>
-      </div>
-
-      <div className="mb-32 grid grid-cols-8 text-center lg:max-w-6xl lg:w-full lg:mb-0">
-          <div className="col-span-1"></div>
-          <div className="col-span-3 flex xl:hidden">
-              <Image
-                src="/dad-jokes-generator-dad-600x600-01.jpg"
-                width={600}
-                height={600}
-                alt=""
-                priority={false}
-              />
+            />
           </div>
-          <div className="col-span-3 flex xl:hidden">
+          <div className="col-span-9 xl:col-span-5 px-0 xl:px-36 py-0 xl:py-12">
+            <p className="text-xl mb-6">{dadJoke}</p>
+            <button className="mt-6 p-5 bg-indigo-500 hover:bg-black text-white	rounded" onClick={fetchData}>Generate Dad Joke</button>
+          </div>
+          <div className="col-span-2 hidden xl:flex">
             <Image
                 src="/dad-jokes-generator-teenager-600x600-01.jpg"
                 width={600}
                 height={600}
                 alt=""
-                priority={false}
+                priority={true}
             />
           </div>
-          <div className="col-span-1"></div>
         </div>
-    </main>
+
+        <div className="mb-32 grid grid-cols-8 text-center lg:max-w-6xl lg:w-full lg:mb-0">
+            <div className="col-span-1"></div>
+            <div className="col-span-3 flex xl:hidden">
+                <Image
+                  src="/dad-jokes-generator-dad-600x600-01.jpg"
+                  width={600}
+                  height={600}
+                  alt=""
+                  priority={false}
+                />
+            </div>
+            <div className="col-span-3 flex xl:hidden">
+              <Image
+                  src="/dad-jokes-generator-teenager-600x600-01.jpg"
+                  width={600}
+                  height={600}
+                  alt=""
+                  priority={false}
+              />
+            </div>
+            <div className="col-span-1"></div>
+          </div>
+      </main>
+
+    </div>
     )
   }
