@@ -12,7 +12,7 @@ export default function handler(req, res) {
 
         const fileToRead = filePath[0];
 
-        const file = dir + '\\' + fileToRead;
+        const file = './src/' + dirRelativeToPublicFolder + '/' + fileToRead;
 
         // Read the file synchronously (blocking operation)
         const fileContent = fs.readFileSync(file, 'utf-8');
